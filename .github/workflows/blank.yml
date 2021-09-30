@@ -20,4 +20,4 @@ jobs:
         run: aqt tool linux tools_ifw 4.0.0 qt.tools.ifw.40
 
       - if: matrix.aqt_ver == '2'
-        run: aqt tool linux desktop tools_ifw 4.0.0
+        run: aqt install-tool linux desktop tools_ifw 4.0.0
