@@ -15,4 +15,4 @@ jobs:
     steps:
       - run: pip install aqtinstall==${{ matrix.aqt_ver }}.*
 
-      - run: aqt tool linux desktop tools_ifw
+      - run: aqt tool linux desktop tools_ifw qt.tools.ifw.41
