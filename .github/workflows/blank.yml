@@ -13,6 +13,6 @@ jobs:
       matrix:
         aqt_ver: [1, 2]
     steps:
-      - run: pip install aqtinstall~=${{ matrix.aqt_ver }}
+      - run: pip install aqtinstall==${{ matrix.aqt_ver }}.*
 
       - run: aqt tool linux tools_ifw 4.1.1 qt.tools.ifw.41
