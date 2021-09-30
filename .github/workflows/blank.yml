@@ -10,13 +10,14 @@ jobs:
   build:
     runs-on: ubuntu-20.04
     strategy:
+      fail-fast: false
       matrix:
         aqt_ver: [1, 2]
     steps:
       - run: pip install aqtinstall==${{ matrix.aqt_ver }}
 
-      - if: aqt_ver == '1'
+      - if: matrix.aqt_ver == '1'
         run: aqt tool linux tools_ifw 4.0.0 qt.tools.ifw.40
 
-      - if: aqt_ver == '2'
+      - if: matrix.aqt_ver == '2'
         run: aqt tool linux desktop tools_ifw 4.0.0 qt.tools.ifw.40
