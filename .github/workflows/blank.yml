@@ -1,8 +1,7 @@
-name: install non-existing tools by aqtinstall
+name: install tools by aqtinstall
 
 on:
   push:
-    branches: [ main ]
 
   workflow_dispatch:
 
@@ -15,4 +14,4 @@ jobs:
     steps:
       - run: pip install aqtinstall==${{ matrix.aqt_ver }}
 
-      - run: aqt tool linux tools_ifw 4.0.0 qt.tools.ifw.40
+      - run: aqt tool linux tools_ifw 4.1.1 qt.tools.ifw.41
